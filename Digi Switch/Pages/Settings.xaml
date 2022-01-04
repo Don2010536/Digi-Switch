@@ -1,0 +1,91 @@
+﻿<Page x:Class="Digi_Switch.Pages.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Digi_Switch.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Settings" Loaded="Page_Loaded">
+
+	<Grid>
+		<Border x:Name="MainBorder" Margin="10,10,10,10" CornerRadius="20,20,20,20" Background="#FF171D29">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="220"/>
+					<ColumnDefinition Width="170"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="88"/>
+					<RowDefinition Height="88"/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<ScrollViewer VerticalScrollBarVisibility="Auto" Margin="20,10,0,13" Grid.Row="1" Grid.RowSpan="2">
+					<StackPanel>
+
+						<Grid Height="40" Margin="0,10,0,0">
+							<Border x:Name="PrimaryRect" HorizontalAlignment="Left" Width="40" Background="Black" BorderBrush="White" BorderThickness="1,1,1,1" CornerRadius="20,20,20,20"/>
+							<TextBox x:Name="PrimaryTxt" CharacterCasing="Upper" Margin="0,5,0,5" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Text="#FFFFFFFF" HorizontalAlignment="Center" Padding="5,0,5,0" BorderThickness="0,0,0,1" Background="{x:Null}" Foreground="White" KeyUp="Txt_KeyUp"/>
+						</Grid>
+						<Grid Height="40" Margin="0,10,0,0">
+							<Border x:Name="SecondaryRect" HorizontalAlignment="Left" Width="40" BorderBrush="White" Background="Black" BorderThickness="1,1,1,1" CornerRadius="20,20,20,20"/>
+							<TextBox x:Name="SecondaryTxt" CharacterCasing="Upper" Margin="50,5,10,5" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Text="#FFFFFFFF" HorizontalAlignment="Left" Padding="5,0,5,0" BorderThickness="0,0,0,1" Background="{x:Null}" Foreground="White" KeyUp="Txt_KeyUp"/>
+						</Grid>
+						<Grid Height="40" Margin="0,10,0,0">
+							<Border x:Name="HighlightRect" HorizontalAlignment="Left" Width="40" BorderBrush="White" Background="Black" BorderThickness="1,1,1,1" CornerRadius="20,20,20,20"/>
+							<TextBox x:Name="HighlightTxt" CharacterCasing="Upper" Margin="50,5,10,5" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Text="#FFFFFFFF" HorizontalAlignment="Left" Padding="5,0,5,0" BorderThickness="0,0,0,1" Background="{x:Null}" Foreground="White" KeyUp="Txt_KeyUp"/>
+						</Grid>
+						<Grid Height="40" Margin="0,10,0,0">
+							<Border x:Name="TextRect" HorizontalAlignment="Left" Width="40" BorderBrush="White" Background="Black" BorderThickness="1,1,1,1" CornerRadius="20,20,20,20"/>
+							<TextBox x:Name="TextTxt" CharacterCasing="Upper" Margin="50,5,10,5" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Text="#FFFFFFFF" HorizontalAlignment="Left" Padding="5,0,5,0" BorderThickness="0,0,0,1" Background="{x:Null}" Foreground="White" KeyUp="Txt_KeyUp"/>
+						</Grid>
+						<Grid Height="40" Margin="0,10,0,0">
+							<Border x:Name="GoodRect" HorizontalAlignment="Left" Width="40" BorderBrush="White" Background="Black" BorderThickness="1,1,1,1" CornerRadius="20,20,20,20"/>
+							<TextBox x:Name="GoodTxt" CharacterCasing="Upper" Margin="50,5,10,5" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Text="#FFFFFFFF" HorizontalAlignment="Left" Padding="5,0,5,0" BorderThickness="0,0,0,1" Background="{x:Null}" Foreground="White" KeyUp="Txt_KeyUp"/>
+						</Grid>
+						<Grid Height="40" Margin="0,10,0,0">
+							<Border x:Name="MediumRect" HorizontalAlignment="Left" Width="40" BorderBrush="White" Background="Black" BorderThickness="1,1,1,1" CornerRadius="20,20,20,20"/>
+							<TextBox x:Name="MediumTxt" CharacterCasing="Upper" Margin="50,5,10,5" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Text="#FFFFFFFF" HorizontalAlignment="Left" Padding="5,0,5,0" BorderThickness="0,0,0,1" Background="{x:Null}" Foreground="White" KeyUp="Txt_KeyUp"/>
+						</Grid>
+						<Grid Height="40" Margin="0,10,0,0">
+							<Border x:Name="BadRect" HorizontalAlignment="Left" Width="40" BorderBrush="White" Background="Black" BorderThickness="1,1,1,1" CornerRadius="20,20,20,20"/>
+							<TextBox x:Name="BadTxt" CharacterCasing="Upper" Margin="50,5,10,5" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Text="#FFFFFFFF" HorizontalAlignment="Left" Padding="5,0,5,0" BorderThickness="0,0,0,1" Background="{x:Null}" Foreground="White" KeyUp="Txt_KeyUp"/>
+						</Grid>
+					</StackPanel>
+				</ScrollViewer>
+				<TextBlock x:Name="LogTxt" Margin="20,10,0,0" Grid.Row="3" Text="Log" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="24" Height="32"/>
+				<RichTextBox x:Name="LogBox" Grid.Row="3" Margin="20,47,20,20" Background="#FF1C2130" Foreground="White" Padding="5,2,5,2" BorderBrush="White" Grid.ColumnSpan="3">
+					<RichTextBox.Effect>
+						<DropShadowEffect x:Name="LogBoxDropShadow" Color="#FF71A1F9" BlurRadius="10" ShadowDepth="0"/>
+					</RichTextBox.Effect>
+					<FlowDocument>
+						<Paragraph>
+							<Run Text=""/>
+						</Paragraph>
+					</FlowDocument>
+				</RichTextBox>
+				<CheckBox x:Name="TopCheck" Content="Always on top" ToolTip="Force this window always on top" HorizontalAlignment="Left"  VerticalAlignment="Top" Foreground="White" BorderBrush="#FF4869C0" FontSize="16" Padding="4,-4,0,0" Click="CheckBox_Click" Grid.Column="2" Margin="10,10,0,0" Height="17" Width="120" Grid.Row="1"/>
+
+				<Button x:Name="SaveBtn" Visibility="Visible" Content="Save" Margin="35,24,36,24" Background="#FF53915A" BorderBrush="{x:Null}" Padding="1,1,1,1" UseLayoutRounding="True" BorderThickness="0,0,0,0" Foreground="White" Grid.Column="1" Click="SaveBtn_Click" Grid.Row="1">
+					<Button.Resources>
+						<Style TargetType="{x:Type Border}">
+							<Setter Property="CornerRadius" Value="12"/>
+						</Style>
+					</Button.Resources>
+				</Button>
+				<Button x:Name="ResetBtn" Visibility="Visible" Content="Reset" Margin="35,24,36,24" Background="#FFCFA031" BorderBrush="{x:Null}" Padding="1,1,1,1" UseLayoutRounding="True" BorderThickness="0,0,0,0" Foreground="White" Grid.Column="1" Click="ResetBtn_Click" Grid.Row="2">
+					<Button.Resources>
+						<Style TargetType="{x:Type Border}">
+							<Setter Property="CornerRadius" Value="12"/>
+						</Style>
+					</Button.Resources>
+				</Button>
+				<TextBlock x:Name="ColorTxt" Margin="20,0,0,0" Text="Color Options" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="24" Height="32"/>
+				<TextBlock x:Name="SettingsTxt" Margin="10,0,0,0" Text="Settings" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="24" Grid.Column="2" Height="32"/>
+				<TextBlock x:Name="SaveTxt" Grid.Column="2" HorizontalAlignment="Stretch" Grid.Row="2" Text="Saved" TextWrapping="Wrap" VerticalAlignment="Center" Width="370" FontSize="24" TextAlignment="Center" Foreground="White"/>
+			</Grid>
+		</Border>
+	</Grid>
+</Page>
