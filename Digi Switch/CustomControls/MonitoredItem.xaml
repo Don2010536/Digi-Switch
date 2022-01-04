@@ -10,7 +10,7 @@
 			<ColumnDefinition Width="707*"/>
 			<ColumnDefinition Width="93*"/>
 		</Grid.ColumnDefinitions>
-		<Border x:Name="MainBorder" BorderThickness="1" BorderBrush="White" CornerRadius="14,14,14,14" Background="#FF1D2231" VerticalAlignment="Center" Grid.ColumnSpan="2">
+		<Border x:Name="MainBorder" BorderThickness="1" BorderBrush="White" CornerRadius="14,14,14,14" Background="#FF1D2231" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,5,0,5">
 			<Border.Effect>
 				<DropShadowEffect x:Name="Shadow" Color="#FF71A1F9" ShadowDepth="0" BlurRadius="10"/>
 			</Border.Effect>
@@ -43,7 +43,7 @@
 				<DropShadowEffect x:Name="Shadow_Cookie" Color="#FF71A1F9" ShadowDepth="0" BlurRadius="10"/>
 			</Border.Effect>
 			<Grid>
-				<TextBox x:Name="CookieTxt" VerticalContentAlignment="Center" HorizontalAlignment="Center" Text="Paste Your Cookie Here..." TextWrapping="NoWrap" VerticalAlignment="Center" Width="778" Height="28" BorderBrush="{x:Null}" CaretBrush="White" Background="{x:Null}" Foreground="White" FontSize="14" BorderThickness="0,0,0,0" ToolTip="Click to edit"/>
+				<TextBox x:Name="CookieTxt" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" Text="Paste Your Cookie Here..." TextWrapping="NoWrap" VerticalAlignment="Center" BorderBrush="{x:Null}" CaretBrush="White" Background="{x:Null}" Foreground="White" FontSize="14" BorderThickness="0,0,0,0" ToolTip="Click to edit" Margin="10,0,10,0"/>
 			</Grid>
 		</Border>
 	</Grid>
